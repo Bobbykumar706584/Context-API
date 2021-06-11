@@ -19,9 +19,9 @@ const Form = () => {
 
     return ( 
         <form onSubmit={handleSubmit}>
-            <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} placeholder="Post Title" />
-            <input type="text" value={body} onChange={(e) => setBody(e.target.value)} placeholder="Post body" />
-            <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} placeholder="Username" />
+            <input type="text" required value={title} onChange={(e) => setTitle(e.target.value)} placeholder="Post Title" />
+            <input type="text" required value={body} onChange={(e) => setBody(e.target.value)} placeholder="Post body" />
+            <input type="text" required value={username} onChange={(e) => setUsername(e.target.value)} placeholder="Username" />
             <input type="submit" value="Add post"/>
         </form>
      );

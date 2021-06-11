@@ -10,7 +10,15 @@ export const postReducer = (state, action) => {
                 id: uuidv4()
             }]
         case "REMOVE_POST":
-            return state.map(post => post.id !== action.id)
+            return state.filter(post => post.id !== action.id)
+        case "EDIT_POST":
+             return state.map(user => {
+                 if (user.id === action.id) {
+                     return action
+                 }
+                 return user
+            })
+
         default:
             return state;        
     }
